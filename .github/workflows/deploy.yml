@@ -31,7 +31,7 @@ jobs:
           cargo binstall --disable-telemetry trunk
 
       - name: Build
-        run: trunk build --release
+        run: trunk build --release --public-url "/${{ github.event.repository.name }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
